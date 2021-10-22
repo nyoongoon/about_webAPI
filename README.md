@@ -16,8 +16,21 @@ webAPI에 대해 알게 된 것을 기록하는 저장소입니다.
 ## FileList
 <br/><br/>
 
-# FomrData 
-- 
+# FormData 
+- form필드와 그 값을 나타내는 키/값쌍을 쉽게 생성하는 방법을 제공. ajax를 이용하여 쉽게 데이터 전송가능. 
+```javascript
+var formData = new FormData($form);
+$.ajax({
+	url:url,
+	type:'post',
+	data: formData,
+	cache:false,
+	contentType:false,
+	processData; false,
+	success:function(){
+
+	}
+}); 
 
 <br/><br/>
 # ReadableStream
