@@ -31,8 +31,58 @@ $.ajax({
 
 	}
 }); 
-
+```
 <br/><br/>
 # ReadableStream
 - 바이트 데이터를 읽을 수 있는 스트림을 제공. Fetch API는 Response 객체의 body 속성을 통해서 ReadableStream의 구체적인 인스턴스를 제공. 
+<br/><br/>
+
+
+# REST, REST-ful, REST-API
+## REST
+- 존재하는 자원(Resource)을 식별하고 제어하는 방법론.
+
+### 자원(Resource)이란?
+- 일이 처리되는 비용
+- 컴퓨터의 자원이란 cpu가 수행하는 명령, 하드디스크에 저장되는 파일, 메모리에 저장되는 데이터들을 의미한다.
+- REST는 컴퓨터 자원을 사용하여 처리하는 한 단위의 작업을 **식별, 제어**할 수 있어야한다. 
+- 자원을 식별할 수 있는 식별자가 필요.
+
+### 자원의 제어(Resource Methods)
+- CRUD를 자원에 수행하는 것.
+- 제어 방법은 일관적 인터페이스로 구성되어야 한다. 
+
+### 자원의 표현(Resource Representation)
+- 조회한 순간의 자원 상태를 의미.
+- REST의 자원의 표현은 자기서술적인(self-descriptive)메시지와 HATEOAS(hypermedia as the engine of application state)로 구성됨. 이는 데이터를 설명하는 메타데이터, 다음 자원으로의 이동을 안내하는 하이퍼 텍스트 등이 포함. REST은 클라이언트가 자원의 표현만 보더라도 이해 할 수 있는 것을 목표로 함.
+
+## 웹기반(HTTP)의 REST
+- 보통 말하는 REST시스템은 HTTP기반의 REST시스템임.
+
+### 자원의 식별 
+- HTTP는 REST 시스템이 요구하는 자원의 식별을 **URL**의 정의로 처리합니다. 
+- 자원은 명사로 커뮤니케이션 하기 때문에 **URL을 명사로** 표현함으로써 자원을 
+나타낸다. 
+
+### 자원의 제어
+- HTTP는 자원의 제어를 HTTP Method로 표현함. -> get(조회)/post(등록)/put(수정_/delete(삭제).
+
+### 자원의 표현 
+- HTTP는 자원의 표현을 HTTP 응답 메시지로 구현함.
+- self-descriptive와 HATEOS를 만족시키기 위해 ContentType 또는 커스텀 HTTP헤더에 메타데이터 명시, 데이터 링크를 포함하는 등의 기법 사용. 
+
+## REST-FUL
+### REST 시스템의 구성 요소는 6개.
+- 1 Client-Server
+- 2 Stateless
+- 3 Cacheable
+- 4 Unitform-Interface
+- 5 Layered-System
+- 6 Code on demand(optional)
+- -> 4번째 요소는 구현이 어렵기 때문에 생략하기도 한다. 
+- 모든 구성요소를 완벽하게 지킨 REST 시스템을 **REST-FUL** 시스템이라고 한다.
+
+## REST-API
+- API는 컴퓨터의 자원 제어 방법의 집합.
+- REST-API는 REST시스템의 자원 제어 방법의 집합임.
 <br/><br/>
