@@ -33,6 +33,20 @@ $.ajax({
 }); 
 ```
 <br/><br/>
+# multipart form data 
+
+- multipart/form-data is **one of the value of enctype attribute**, which is used in form element that have a file upload. multi-part means form data divides into multiple parts and send to server.
+
+### enctype attribute ?
+- 이 속성은 \<form\>요소의 method 속성값이 post인 경우에만 사용.
+- enctype(인코드 타입) 속성은 서버로 데이터가 보내지기 전에 어떻게 인코딩이 되어야하는지 명시해주는 속성이다.
+- 기본값은  "application/x-www-form-urlencoded". 공백은 "+" 로, 특수 문자는 아스키코드로 변환되어 인코딩된다.  
+<br/> --> (key=value&key=value 형태로 전송되며, 영숫자가 아닌 문자는 퍼센트 기호 및 문자의 ASCII 코드를 나타내는 두 개의 16 진수로 변환됨. 우리가 전송하려는 데이터가 영숫자가 아닌 경우 3바이트로 표현하기 때문에 바이너리 파일을 전송할 경우 페이로드를 3배로 만들기에 무척 비효율적)
+- "multipart/form-data". 모든 문자를 인코딩하지 않음. 파일이나 이미지를 서버에 전송할 때 주로 사용.
+<br/> --> (바이너리 데이터를 효율적으로 전송할 수 있으나 웹에서 많이 사용되는 텍스트로만 이루어진 POST 전송은 오히려 MIME 헤더가 추가되기 때문에 오버 헤드가 발생됨)
+- "text/plain". 공백문자는 "+" 로 변환되지만, 나머지 문자는 모두 인코딩 되지 않음.
+<br/><br/>
+
 # ReadableStream
 - 바이트 데이터를 읽을 수 있는 스트림을 제공. Fetch API는 Response 객체의 body 속성을 통해서 ReadableStream의 구체적인 인스턴스를 제공. 
 <br/><br/>
