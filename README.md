@@ -33,7 +33,7 @@ $.ajax({
 }); 
 ```
 <br/><br/>
-# multipart form data 
+# Multipart form data 
 
 - multipart/form-data is **one of the value of enctype attribute**, which is used in form element that have a file upload. multi-part means form data divides into multiple parts and send to server.
 
